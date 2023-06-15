@@ -38,7 +38,6 @@ def aux_preprocess(data, method):
         data = data @ np.diag(multiplier)
         info = {'type': 'cscale', 'mean': mean, 'multiplier': np.diag(multiplier)}
     else:
-        # add the other preprocess methods here
         raise ValueError('Invalid preprocessing method')
     return data, info
 
@@ -60,7 +59,7 @@ def is_psd(matrix, tol=1e-8):
 def aux_geigen(A, B, k, maximal=True):
     eps = 1e-10
     A = A + np.eye(A.shape[0])*eps
-    #B = B + np.eye(B.shape[0])*eps
+    B = B + np.eye(B.shape[0])*eps
     # Check for positive semi-definiteness
     if not is_psd(A) or not is_psd(B):
         raise ValueError("Matrix not positive semi-definite")
@@ -83,28 +82,6 @@ def spp_compute_si(xi, Xi, reltol):
     problem.solve(solver=cp.ECOS, verbose=False)
     print("Status:", problem.status)
     return si.value
-
-## Using SPAMS
-# def spp_compute_si(xi, Xi, reltol):
-#     n = Xi.shape[1]
-#     proj_xi = Xi @ np.linalg.lstsq(Xi, xi, rcond=None)[0]
-#     fraction_explained = np.linalg.norm(proj_xi) / np.linalg.norm(xi)
-#     rank_Xi = np.linalg.matrix_rank(Xi)
-#     print(rank_Xi)
-#     print(fraction_explained)
-#     # Setting up the parameters for the SPAMS solver
-#     params = {"mode": 1, "lambda1": reltol, "pos": True}
-#     # Making sure xi and Xi are in the correct format for the SPAMS solver
-#     xi = np.asfortranarray(xi.reshape(-1, 1))
-#     Xi = np.asfortranarray(Xi)
-#     # Using SPAMS to solve the problem
-#     si = spams.lasso(xi, D=Xi, return_reg_path=False, **params).toarray().flatten()
-#     print(si)
-#     print(np.sum(si))
-#     # Normalizing the output to satisfy the sum to 1 constraint
-#     si /= (np.sum(si) + 1e-10)
-#     return si
-
 
 def do_spp(X, ndim=2, preprocess='center', reltol=1e-4):
     # preprocess data
@@ -232,43 +209,6 @@ def main():
     # apply the function to the outputs
     #plot_results(out1['Y'], y_train, 'SPP with reltol=0.01')
     #plot_results(out1['Y'], y_test, 'SPP with reltol=0.01')
-
-
-# Test on Yale Faces Dataset
-    # def main():
-    #     yale = sio.loadmat('Yale_32x32.mat')
-    #     X = yale['fea']
-    #     y = yale['gnd'].flatten()
-    #
-    #     # scale pixels to be [0,1]
-    #     maxValue = np.amax(X)
-    #     X = X / maxValue
-    #     print(X.shape)
-    #
-    #     pca = PCA(n_components=None, whiten=True).fit(X)
-    #     X_pca = pca.transform(X)
-    #
-    #     if is_singular(X_pca):
-    #         raise ValueError("Input matrix is singular!")
-    #     print("The matrix is not singular and has a shape of: ",X_pca.shape)
-    #
-    #     # test different tolerance levels
-    #     out1 = do_spp(X_pca[:None,:], ndim=150, reltol=0.1, preprocess='scale')
-    #
-    #     import matplotlib.pyplot as plt
-    #
-    #     def plot_results(data, labels, title):
-    #         # scatter plot
-    #         plt.figure(figsize=(8,6))
-    #         plt.scatter(data[:,0], data[:,1], c=labels)
-    #         plt.title(title)
-    #         plt.xlabel('Component 1')
-    #         plt.ylabel('Component 2')
-    #         plt.grid(True)
-    #         plt.show()
-    #
-    #     # apply the function to the outputs
-    #     plot_results(out1['Y'], y, 'SPP with reltol=0.01')
 
 
 if __name__ == '__main__':
