@@ -22,5 +22,5 @@ These implementations were reconstructed as part of my thesis work.
 To use these dimensionality reduction methods in your Python projects, you can simply import the respective modules:
 
 ```python
-from spp_method import SPP
-from dsnpe_method import DSNPE
+from SPP_method import SPP
+from DSNPE_method import DSNPE
