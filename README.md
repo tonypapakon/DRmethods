@@ -14,7 +14,7 @@ These implementations were reconstructed as part of my thesis work.
    - Implementation: [SPP_method.py](SPP_method.py)
 
 2. **Discriminant Sparse Neighborhood Preserving Embedding (DSNPE):**
-   - Description: DSNPE is a technique designed for face recognition that combines discriminant analysis with neighborhood preserving embedding.
+   - Description: DSNPE is a technique designed for face recognition that combines discriminant analysis with sparsity preserving projections.
    - Implementation: [DSNPE_method.py](DSNPE_method.py)
 
 ## Usage
