@@ -2,8 +2,8 @@
 
 This repository contains Python implementations of two manifold-based dimensionality reduction methods based on the following research papers:
 
-1. [Sparsity Preserving Projections with Applications to Face Recognition]([link_to_paper1](https://www.sciencedirect.com/science/article/abs/pii/S0031320309001964))
-2. [Discriminant Sparse Neighborhood Preserving Embedding for Face Recognition]([link_to_paper2](https://www.sciencedirect.com/science/article/abs/pii/S0031320312000672?via%3Dihub))
+1. [Sparsity Preserving Projections with Applications to Face Recognition][link_to_paper1](https://www.sciencedirect.com/science/article/abs/pii/S0031320309001964)
+2. [Discriminant Sparse Neighborhood Preserving Embedding for Face Recognition][link_to_paper2 (https://www.sciencedirect.com/science/article/abs/pii/S0031320312000672?via%3Dihub)
 
 These implementations were reconstructed as part of my thesis work.
 
