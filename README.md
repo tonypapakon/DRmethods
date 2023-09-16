@@ -24,3 +24,13 @@ To use these dimensionality reduction methods in your Python projects, you can s
 ```python
 from SPP_method import SPP
 from DSNPE_method import DSNPE
+
+#SPP use
+spp = SPP(n_components=50, epsilon=0.05)
+spp.fit(X)
+X_spp = dsnpe.transform(X)
+
+#DSNPE use
+dsnpe = DSNPE(n_components=50, epsilon=0.05, gamma=1.0)
+dsnpe.fit(X, y)
+X_dsnpe = dsnpe.transform(X)
