@@ -27,7 +27,7 @@ transformers and models, which is a widely accepted standard for machine learnin
 '''
 
 class SPP:
-    def __init__(self, n_components, epsilon=0.05):
+    def __init__(self, n_components, epsilon=0.01):
         self.n_components = n_components
         self.epsilon = epsilon
         self.projection_matrix_ = None
