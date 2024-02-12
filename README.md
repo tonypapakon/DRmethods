@@ -13,11 +13,11 @@ These implementations were reconstructed as part of my thesis work.
 
 ### Research Paper
 - Description: My thesis paper explores the implementation and applications of sparsity-preserving projections and discriminant sparse neighborhood preserving embedding for face recognition. It provides in-depth insights into the methods and their performance.
-  - [Link to My Thesis Paper](https://github.com/tonypapakon/DRmethods/blob/main/Thesis.pdf)
+  - [Link to My Thesis Paper (Greek)](https://github.com/tonypapakon/DRmethods/blob/main/Thesis.pdf)
 
 ### Presentation
 - Overview: This presentation offers a visual walkthrough of the key concepts, methodologies, and findings presented in my thesis. It serves as a supplementary resource to better understand the implemented dimensionality reduction methods.
-  - [Link to My Thesis Presentation](https://github.com/tonypapakon/DRmethods/blob/main/Presentation.pdf)
+  - [Link to My Thesis Presentation (Greek)](https://github.com/tonypapakon/DRmethods/blob/main/Presentation.pdf)
 
 ## Methods Implemented
 
