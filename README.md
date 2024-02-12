@@ -1,4 +1,4 @@
-<img src="https://github.com/tonypapakon/DRmethods/blob/main/wine.png" align="center" width="250">
+<img src="https://github.com/tonypapakon/DRmethods/blob/main/wine.png" align="center" width=50% height=50%>
 
 # Manifold-based Dimensionality Reduction Methods
 
