@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/tonypapakon/DRmethods/blob/main/wine.png" align="center" width=50% height=50% />
+  <img src="https://github.com/tonypapakon/DRmethods/blob/extras/wine.png" align="center" width=50% height=50% />
 </p>
 
 # Manifold-based Dimensionality Reduction Methods
