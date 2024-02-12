@@ -1,4 +1,4 @@
-![alt text](https://github.com/tonypapakon/DRmethods/blob/main/wine.png = 250x250)
+<img src="https://github.com/tonypapakon/DRmethods/blob/main/wine.png" width="48">
 # Manifold-based Dimensionality Reduction Methods
 
 This repository contains Python implementations of two manifold-based dimensionality reduction methods based on the following research papers:
