@@ -41,7 +41,7 @@ from DSNPE_method import DSNPE
 #SPP use
 spp = SPP(n_components=50, epsilon=0.05)
 spp.fit(X)
-X_spp = dsnpe.transform(X)
+X_spp = spp.transform(X)
 
 #DSNPE use
 dsnpe = DSNPE(n_components=50, epsilon=0.05, gamma=1.0)
